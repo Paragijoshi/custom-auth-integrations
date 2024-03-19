@@ -9,6 +9,7 @@ auth_schemes:
     auth_mode: OAUTH2
     authorization_url: https://api.notion.com/v1/oauth/authorize
     token_url: https://api.notion.com/v1/oauth/token
+    token_request_auth_method: basic
     proxy:
       base_url: https://api.notion.com/v1
     fields:
@@ -19,19 +20,18 @@ auth_schemes:
         default: https://api.notion.com
     default_scopes: [] # Replace with actual scopes needed for your integration.
     authorization_params:
-      - name: response_type
-        value: code
-      - name: client_id
-        value: [Your client ID] # Replace with your client ID.
-    token_response_metadata:
-      - name: access_token
-      - name: token_type
-      - name: expires_in
+      response_type: code
+      owner: user
+      # Replace with your client ID.
+    token_params:
+      grant_type: authorization_code
+    token_response_metadat:
+      [access_token, token_type, scope, expires_in, refresh_token]
 
   - scheme_name: internal_api
     auth_mode: API
     proxy:
-      base_url: https://api.notion.com/v1
+      base_url: https://api.notion.com
     fields:
       - name: base_url
         displayName: Base URL
