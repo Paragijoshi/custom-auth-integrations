@@ -1,7 +1,7 @@
 unique_key: notion
 name: notion_integration
 description: Notion OAuth Integration Template
-logo: [Your logo link]
+logo: https://raw.githubusercontent.com/SamparkAI/open-logos/3589671765c8f385609d8c9039942b2143be5fe3/notion.svg
 categories: [integration, oauth]
 
 auth_schemes:
@@ -17,7 +17,7 @@ auth_schemes:
         description: "The base URL for Notion API requests. Essential for all API calls. For more information, visit the Notion API documentation."
         type: string
         default: https://api.notion.com/v1
-    default_scopes: ["YOUR_DEFAULT_SCOPES"] # Replace with actual scopes needed for your integration.
+    default_scopes: [] # Replace with actual scopes needed for your integration.
     authorization_params:
       - name: response_type
         value: code
@@ -38,7 +38,7 @@ auth_schemes:
         description: "The base URL for internal API integration. For more information, check Notion API documentation."
         type: string
         default: https://api.notion.com/v1
-    default_scopes: ["internal_integration"] # This is indicative; adjust based on your actual integration requirements.
+    default_scopes: [] # This is indicative; adjust based on your actual integration requirements.
     token_response_metadata:
       - name: access_token
       - name: token_type
