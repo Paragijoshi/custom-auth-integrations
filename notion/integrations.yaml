@@ -16,7 +16,7 @@ auth_schemes:
         displayName: Base URL
         description: "The base URL for Notion API requests. Essential for all API calls. For more information, visit the Notion API documentation."
         type: string
-        default: https://api.notion.com/v1
+        default: https://api.notion.com
     default_scopes: [] # Replace with actual scopes needed for your integration.
     authorization_params:
       - name: response_type
