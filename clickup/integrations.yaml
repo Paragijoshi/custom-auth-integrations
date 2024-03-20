@@ -1,8 +1,8 @@
 name: ClickUp Integration
 unique_key: clickup_integration
-docs: https://clickup.com/api
+docs: https://docs.composio.dev/docs/clickup
 description: Integrate your application with ClickUp to manage tasks, projects, and workspaces.
-logo: <link_to_app_logo>
+logo: https://clickup.com/images/for-se-page/clickup.png
 categories: [Project Management, Productivity, API Integration]
 
 auth_schemes:
