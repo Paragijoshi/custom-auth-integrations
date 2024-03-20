@@ -24,4 +24,4 @@ auth_schemes:
         displayName: Base URL
         description: "The base URL is the API endpoint for ClickUp."
         type: string
-        default: "https://api.clickup.com/api/v2"
+        default: "https://api.clickup.com"
