@@ -1,21 +1,27 @@
-name: ClickUp
-docs: https://docs.composio.dev/docs/clickup
-unique_key: clickup
-description: ClickUp is a productivity platform that provides a fundamentally new way to work.
-logo: https://clickup.com/images/for-se-page/clickup.png
-categories: [productivity, ticketing]
+name: ClickUp Integration
+unique_key: clickup_integration
+docs: https://clickup.com/api
+description: Integrate your application with ClickUp to manage tasks, projects, and workspaces.
+logo: <link_to_app_logo>
+categories: [Project Management, Productivity, API Integration]
 
 auth_schemes:
-  - scheme_name: clickup_oauth
+  - scheme_name: OAuth2
     auth_mode: OAUTH2
-    authorization_url: https://app.clickup.com/api
-    token_url: https://api.clickup.com/api/v2/oauth/token
+    authorization_url: "https://app.clickup.com/api"
+    token_url: "https://app.clickup.com/api/v2/oauth/token"
+    default_scopes: [tasks:read, tasks:write]
+    token_response_metadata: [access_token, token_type, expires_in]
+    token_params:
+      grant_type: authorization_code
+    authorization_params:
+      response_type: code
     proxy:
-      base_url: https://api.clickup.com
-
+      base_url: "{{base_url}}"
+      state: "unique_state_value"
     fields:
       - name: base_url
         displayName: Base URL
-        description: "The base URL for ClickUp API requests. For more information, visit https://docs.clickup.com/"
+        description: "The base URL is the API endpoint for ClickUp."
         type: string
-        default: https://api.clickup.com
+        default: "https://api.clickup.com/api/v2"
