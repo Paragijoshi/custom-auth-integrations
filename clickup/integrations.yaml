@@ -1,5 +1,6 @@
 name: clickUp
 Unique Key: clickup
+docs: https://docs.composio.dev/docs/clickup
 Description: ClickUp provides a centralized platform where users can create tasks, set priorities, assign responsibilities, track progress, and communicate with team members—all within a single intuitive interface.
 Logo: https://cdn.dribbble.com/userupload/8032898/file/still-27047b435fcc98d8e119bc13afee525f.png
 categories: [Project Management, Productivity, API Integration]
@@ -9,8 +10,6 @@ auth_schemes:
   auth_mode:  OAuth2
   authorization_url: https://app.clickup.com/api
   token_url: https://api.clickup.com/api/v2/oauth/token
-  default scopes: " "
-  scope seperator: " "
 
 proxy:
   base_url: https://api.clickup.com
