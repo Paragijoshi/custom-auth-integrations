@@ -10,11 +10,12 @@ auth_schemes:
     auth_mode: OAUTH2
     authorization_url: https://app.clickup.com/api
     token_url: https://app.clickup.com/api/v2/oauth/token
-    proxy:
+  proxy:
       base_url: https://api.clickup.com
-    fields:
-      - name: base_url
-        displayName: Base URL
-        description: "The base URL is the API endpoint for ClickUp."
-        type: string
-        default: https://api.clickup.com
+  fields:
+    - name: base_url
+      displayName: Base URL
+      description: "The base URL is the API endpoint for ClickUp."
+      type: string
+      default: https://api.clickup.com
+
